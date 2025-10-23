@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship Portal | Find Your Future</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ======= GENERAL ======= */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f8f9ff;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    /* ======= NAVBAR ======= */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #004aad;
+      padding: 15px 50px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: #00c4ff;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #00c4ff;
+      border-bottom: 2px solid #00c4ff;
+      padding-bottom: 3px;
+    }
+
+    /* ======= HERO ======= */
+    .hero {
+      background: linear-gradient(120deg, #004aad, #00aaff);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .btn.primary {
+      background: white;
+      color: #004aad;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    /* ======= CATEGORIES ======= */
+    .categories {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .category-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 200px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .category-card:hover {
+      background: #004aad;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* ======= FEATURED ======= */
+    .featured {
+      background: #eef3ff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 280px;
+      text-align: left;
+    }
+
+    .card h3 {
+      color: #004aad;
+    }
+
+    /* ======= ABOUT ======= */
+    .about {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about p {
+      color: #555;
+      line-height: 1.6;
+      margin-top: 15px;
+    }
+
+    /* ======= CONTACT ======= */
+    .contact {
+      padding: 60px 20px;
+      background: #004aad;
+      color: white;
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 5px 0;
+    }
+
+    /* ======= FOOTER ======= */
+    footer {
+      background: #002d6e;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+    }
+
+    /* ======= RESPONSIVE ======= */
+    @media(max-width: 768px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .category-card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="logo">Internship<span>Portal</span></div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="internships.html">Browse Internships</a>
+      <a href="student-login.html">Student Login</a>
+      <a href="recruiter-login.html">Recruiter Login</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Perfect Internship</h1>
+      <p>Connecting students and companies for meaningful opportunities.</p>
+      <div class="hero-buttons">
+        <a href="internships.html" class="btn primary">Explore Internships</a>
+        <a href="recruiter-login.html" class="btn secondary">Post an Internship</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <h2>Explore by Work Type</h2>
+    <div class="category-grid">
+      <div class="category-card" onclick="filterInternships('Remote')">Remote</div>
+      <div class="category-card" onclick="filterInternships('Hybrid')">Hybrid</div>
+      <div class="category-card" onclick="filterInternships('On-site')">On-site</div>
+    </div>
+  </section>
+
+  <!-- Featured Internships -->
+  <section class="featured">
+    <h2>Featured Internships</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Web Developer Intern</h3>
+        <p>Company: TechNova</p>
+        <p>Type: Remote</p>
+      </div>
+      <div class="card">
+        <h3>Data Analyst Intern</h3>
+        <p>Company: InsightWorks</p>
+        <p>Type: Hybrid</p>
+      </div>
+      <div class="card">
+        <h3>Mechanical Design Intern</h3>
+        <p>Company: AutoTech</p>
+        <p>Type: On-site</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Our Portal</h2>
+    <p>Our mission is to bridge the gap between students and recruiters by providing a platform
+      where talent meets opportunity. Whether you’re looking for an internship or seeking passionate interns,
+      Internship Portal makes it simple and efficient.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@internshipportal.com</p>
+    <p>Phone: +91 98765 43210</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Internship Portal | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function filterInternships(type) {
+      alert(`Showing ${type} internships...`);
+      window.location.href = 'internships.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiter Dashboard | Internship Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Recruiter Dashboard</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Post a New Internship</h2>
+      <form id="postForm">
+        <input type="text" id="jobTitle" placeholder="Job Title" required>
+        <input type="text" id="company" placeholder="Company Name" required>
+        <select id="type">
+          <option value="remote">Remote</option>
+          <option value="hybrid">Hybrid</option>
+          <option value="offline">Offline</option>
+        </select>
+        <textarea id="description" placeholder="Job Description" required></textarea>
+        <button type="submit" class="btn">Post Internship</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Applications Received</h2>
+      <table id="recruiterTable">
+        <tr><th>Student</th><th>Role</th><th>Status</th></tr>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

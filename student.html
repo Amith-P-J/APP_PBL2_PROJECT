@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | Internship Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Dashboard</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#" id="browseTab">Browse Internships</a>
+      <a href="#" id="applicationsTab">My Applications</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Browse Internships -->
+    <section id="browseSection" class="active">
+      <h2>Available Internships</h2>
+      <label>Filter by Work Type:
+        <select id="filterType">
+          <option value="all">All</option>
+          <option value="remote">Remote</option>
+          <option value="hybrid">Hybrid</option>
+          <option value="offline">Offline</option>
+        </select>
+      </label>
+
+      <div id="internshipsList" class="cards"></div>
+    </section>
+
+    <!-- Applications -->
+    <section id="applicationsSection">
+      <h2>My Applications</h2>
+      <table id="applicationsTable">
+        <tr><th>Role</th><th>Company</th><th>Status</th></tr>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

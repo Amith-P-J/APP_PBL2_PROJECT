@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login | Internship Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+  <div class="login-container">
+    <div class="form-box" id="formBox">
+
+      <!-- Login Form -->
+      <form id="loginForm" class="form active">
+        <h2>Student Login</h2>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required>
+
+        <button type="submit" class="btn primary full">Login</button>
+
+        <p class="switch-text">
+          Don’t have an account? <a href="#" id="toSignup">Sign up</a>
+        </p>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="form">
+        <h2>Student Sign Up</h2>
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Your name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Your email" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Create password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Re-enter password" required>
+
+        <button type="submit" class="btn primary full">Create Account</button>
+
+        <p class="switch-text">
+          Already have an account? <a href="#" id="toLogin">Login</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Switch between login and signup
+    const toSignup = document.getElementById("toSignup");
+    const toLogin = document.getElementById("toLogin");
+    const loginForm = document.getElementById("loginForm");
+    const signupForm = document.getElementById("signupForm");
+
+    toSignup.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginForm.classList.remove("active");
+      signupForm.classList.add("active");
+    });
+
+    toLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      signupForm.classList.remove("active");
+      loginForm.classList.add("active");
+    });
+  </script>
+
+</body>
+</html>

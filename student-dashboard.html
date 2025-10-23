@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | Internship Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-page">
+
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <nav>
+        <a href="#" class="active" data-page="overview">🏠 Overview</a>
+        <a href="#" data-page="profile">👤 My Profile</a>
+        <a href="#" data-page="applications">📋 My Applications</a>
+        <a href="#" data-page="browse">🔍 Browse Internships</a>
+        <a href="index.html">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Overview Section -->
+      <section id="overview" class="dash-section active">
+        <h2>Welcome, Kavin 👋</h2>
+        <p>Here’s your internship summary:</p>
+
+        <div class="stats">
+          <div class="stat-card">
+            <h3>5</h3>
+            <p>Total Applications</p>
+          </div>
+          <div class="stat-card">
+            <h3>2</h3>
+            <p>Shortlisted</p>
+          </div>
+          <div class="stat-card">
+            <h3>1</h3>
+            <p>Rejected</p>
+          </div>
+        </div>
+
+        <h3>Recent Applications</h3>
+        <table class="applications-table">
+          <thead>
+            <tr>
+              <th>Internship</th>
+              <th>Company</th>
+              <th>Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Web Developer Intern</td>
+              <td>TechNova</td>
+              <td>Remote</td>
+              <td><span class="status shortlisted">Shortlisted</span></td>
+            </tr>
+            <tr>
+              <td>Data Analyst Intern</td>
+              <td>InsightWorks</td>
+              <td>Hybrid</td>
+              <td><span class="status applied">Applied</span></td>
+            </tr>
+            <tr>
+              <td>Mechanical Design Intern</td>
+              <td>AutoTech</td>
+              <td>On-site</td>
+              <td><span class="status rejected">Rejected</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Profile Section -->
+      <section id="profile" class="dash-section">
+        <h2>My Profile</h2>
+        <form class="profile-form">
+          <label>Full Name</label>
+          <input type="text" value="Kavin Satish">
+
+          <label>Email</label>
+          <input type="email" value="kavin@example.com">
+
+          <label>College / University</label>
+          <input type="text" value="Amrita University">
+
+          <label>Resume</label>
+          <input type="file">
+
+          <button class="btn primary" type="submit">Save Changes</button>
+        </form>
+      </section>
+
+      <!-- Applications Section -->
+      <section id="applications" class="dash-section">
+        <h2>My Applications</h2>
+        <table class="applications-table">
+          <thead>
+            <tr>
+              <th>Internship</th>
+              <th>Company</th>
+              <th>Location</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Software Engineer Intern</td>
+              <td>CodeCrafters</td>
+              <td>Remote</td>
+              <td><span class="status applied">Applied</span></td>
+            </tr>
+            <tr>
+              <td>IoT Research Intern</td>
+              <td>RoboCore</td>
+              <td>Chennai</td>
+              <td><span class="status shortlisted">Shortlisted</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Browse Section -->
+      <section id="browse" class="dash-section">
+        <h2>Browse Internships</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>AI Intern</h3>
+            <p>Company: DataMind</p>
+            <p>Type: Remote</p>
+            <button class="btn secondary">Apply</button>
+          </div>
+          <div class="card">
+            <h3>Design Intern</h3>
+            <p>Company: PixelWorks</p>
+            <p>Type: Hybrid</p>
+            <button class="btn secondary">Apply</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Sidebar navigation handling
+    const links = document.querySelectorAll(".sidebar a[data-page]");
+    const sections = document.querySelectorAll(".dash-section");
+
+    links.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = link.getAttribute("data-page");
+
+        // Update active sidebar link
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+
+        // Show selected section
+        sections.forEach(s => s.classList.remove("active"));
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

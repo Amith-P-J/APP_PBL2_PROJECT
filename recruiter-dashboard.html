@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiter Dashboard | Internship Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #f8f8f8;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background: #004aad;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dashboard-container {
+      padding: 40px;
+    }
+
+    .internship-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .post-btn {
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .post-btn:hover {
+      background: #1f7e34;
+    }
+
+    .logout-btn {
+      background: #ff4b5c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover { background: #c43b4a; }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Welcome, Recruiter</h2>
+    <div>
+      <button class="post-btn" onclick="window.location.href='post-internship.html'">Post Internship</button>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <h3>Your Posted Internships</h3>
+    <div class="internship-list" id="recruiterInternships"></div>
+  </div>
+
+  <script>
+    const recruiterInternships = [
+      { title: "Frontend Developer", applicants: 10, type: "Remote" },
+      { title: "Data Scientist", applicants: 6, type: "On-site" },
+      { title: "Marketing Intern", applicants: 4, type: "Hybrid" }
+    ];
+
+    const container = document.getElementById("recruiterInternships");
+    recruiterInternships.forEach(job => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <h3>${job.title}</h3>
+        <p><strong>Type:</strong> ${job.type}</p>
+        <p><strong>Applicants:</strong> ${job.applicants}</p>
+        <button class="post-btn">View Applicants</button>
+      `;
+      container.appendChild(card);
+    });
+
+    function logout() {
+      window.location.href = "recruiter-login.html";
+    }
+  </script>
+</body>
+</html>

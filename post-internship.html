@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Internship | Internship Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-container {
+      max-width: 500px;
+      background: white;
+      margin: 100px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #004aad;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #003070;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Post a New Internship</h2>
+    <form id="postForm">
+      <input type="text" id="title" placeholder="Internship Title" required>
+      <input type="text" id="company" placeholder="Company Name" required>
+      <select id="type" required>
+        <option value="">Select Type</option>
+        <option value="Remote">Remote</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="On-site">On-site</option>
+      </select>
+      <textarea id="description" rows="5" placeholder="Job Description" required></textarea>
+      <button type="submit">Post Internship</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("postForm").addEventListener("submit", e => {
+      e.preventDefault();
+      alert("Internship posted successfully!");
+      window.location.href = "recruiter-dashboard.html";
+    });
+  </script>
+</body>
+</html>
